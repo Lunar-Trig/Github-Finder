@@ -1,13 +1,29 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/yeti/bootstrap.min.css" integrity="sha384-mLBxp+1RMvmQmXOjBzRjqqr0dP9VHU2tb3FK6VB0fJN/AOu7/y+CAeYeWJZ4b3ii" crossorigin="anonymous">
+    <link href="../css/style.css">
     <title>Github Finder</title>
 </head>
 <body>
-    nav
+                    <!--First Step of Project: Building the UI--> 
+    <div class="container">
+        <div class="body">
+            <form class="form">
+                <h1 id="form-heading">Github Finder</h1>
+                <label for="form-input" id="form-description">Search Github Users here to get their profile info and repos</label>
+                <br> 
+                <input type="text" id="form-input" placeholder="Github Username">
+            </form>
+            <h3 id="form-output-label">Users</h3>
+            <div class="form-output"></div>
+        </div>
+    </div>
+
+<script src="../js/github.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
