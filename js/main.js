@@ -1,18 +1,33 @@
-      // Second Step of the Project: Fetching the User's Profile Data
+// Initializing the UI constructor from github.js to use it here: in our main.js
+const ui = new UI(); 
 
-
-// Initializing the Github Constructor from github.js to use it here: in our main.js
+// Initializing the Github constructor from github.js to use it here: in our main.js
 const github = new Github(); 
 
 // Defining Search Input
-const searchInput = document.getElementById('form-input');
+const searchInput = document.getElementById('profile-search-input');
 
-// Search Input Event Listener
 searchInput.addEventListener('keyup', (e) => {
     var inputUser = e.target.value;
     
-  // Http call with getUser() to return the inputed user's profile data in json form to the console and validating
+      // Third Step of the Project: Display the Profile with validation
+
+
     if(inputUser !== ''){
-        
-    } 
+        // HTTP call
+        github.getUser(inputUser)
+          .then(data => {
+            // Validating
+            if(data.profile.message === 'Not Found') {
+              // Show Alert
+
+            } else {
+              // Show profile
+              ui.showProfile(data.profile);
+            }
+        })
+    } else {
+      // Clear Profile
+      
+    }
 });
