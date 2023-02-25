@@ -1,6 +1,4 @@
-      // Second Step of the Project: Fetching the User's Profile Data
-
-
+  
 // Creating Github Key Constructor and Fetching User API 
 class Github {
     constructor () {

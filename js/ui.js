@@ -4,22 +4,27 @@ class UI {
     }
 
     showProfile(user) {
+        function slice(sli){
+           var a = sli.toString();
+           var b = a.slice(0,10);
+           return b;
+        } 
         this.profile.innerHTML = `
             <div class="profile-output-avatar">
                 <img id="output-img" src="${user.avatar_url}">
                 <a href="${user.html_url}" target="_blank" id="output-img-link">View Profile</a>
             </div>
             <div class="profile-output-public-items">
-                <span id="output-repos-count">Public Repos: ${user.public_repos}</spam>
-                <span id="output-gists">Public Gists: ${user.public_gists}</spam>
-                <span id="output-followers">Followers: ${user.followers}</spam>
-                <span id="output-following">Following: ${user.following}</spam>
+                <span id="output-repos-count">Public Repos: ${user.public_repos},</spam>
+                <span id="output-gists">Public Gists: ${user.public_gists},</spam>
+                <span id="output-followers">Followers: ${user.followers},</spam>
+                <span id="output-following">Following: ${user.following};</spam>
             </div>
             <ul class="profile-output-private-list">
                 <li id="output-list-item">Company: ${user.company}</li>
                 <li id="output-list-item">Website/Blog: ${user.blog}</li>
                 <li id="output-list-item">Location: ${user.location}</li>
-                <li id="output-list-item">Member Since: ${user.created_at}</li>
+                <li id="output-list-item">Member Since: ${slice(user.created_at)}</li>
             </ul>
             <h2 id="repos-heading">Latest Repos:</h2>
             <div class="output-repos"></div>

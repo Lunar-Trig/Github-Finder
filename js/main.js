@@ -9,9 +9,6 @@ const searchInput = document.getElementById('profile-search-input');
 
 searchInput.addEventListener('keyup', (e) => {
     var inputUser = e.target.value;
-    
-      // Third Step of the Project: Display the Profile with validation
-
 
     if(inputUser !== ''){
         // HTTP call

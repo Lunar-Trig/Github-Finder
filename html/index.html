@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Github Finder</title>
 </head>
 <body>
-                    <!--First Step of Project: Building the UI-->
-                    
                     
     <div class="container">
         <div class="profile">
             <form class="profile-search">
                 <h1 id="profile-search-title">Github Finder</h1>
-                <label for="profile-search-input" id="profile-search-description">Search Github Users here to get their profile info and repos</label>
+                <label for="profile-search-input" style="position: relative; bottom:0.7em;" id="profile-search-description">Search Github Users here to get their profile info and repos</label>
                 <br> 
-                <input type="text" id="profile-search-input" placeholder="Github Username">
+                <input type="text" id="profile-search-input" autocomplete="off" placeholder="Github Username">
             </form>
             <h3 id="profile-output-heading">Users</h3>
             <div class="profile-output"></div>
