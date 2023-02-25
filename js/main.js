@@ -20,14 +20,15 @@ searchInput.addEventListener('keyup', (e) => {
             // Validating
             if(data.profile.message === 'Not Found') {
               // Show Alert
-
+              ui.showAlert('User not found', 'profile-error-alert' )
             } else {
               // Show profile
               ui.showProfile(data.profile);
+              ui.showRepos(data.repos);
             }
         })
     } else {
       // Clear Profile
-      
+      ui.clearProfile();
     }
 });
